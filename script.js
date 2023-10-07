@@ -158,7 +158,14 @@ function handleCardClick(event) {
         }
           setTimeout(function(){
             if(match === wincon){
-               nhighscore = Number(highScore)
+              let  nhighscore 
+              if(highScore === null){
+                 nhighscore = 1000
+              }
+              else{
+                nhighscore = Number(highScore)
+              }
+              
               if(nhighscore > score){
                 highScore = score
                 e.innerText = highScore
